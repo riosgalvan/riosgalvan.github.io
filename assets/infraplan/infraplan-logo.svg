@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 210" role="img" aria-labelledby="title desc">
+  <title id="title">InfraPlan Studio</title>
+  <desc id="desc">Planifica, conecta y documenta infraestructuras técnicas.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="820" y2="210" gradientUnits="userSpaceOnUse"><stop stop-color="#041126"/><stop offset="1" stop-color="#0a2a50"/></linearGradient>
+  </defs>
+  <rect width="820" height="210" rx="30" fill="url(#panel)"/>
+  <circle cx="745" cy="34" r="135" fill="#0b6bdc" opacity=".1"/>
+  <g transform="translate(22 -6) scale(2.05)"><g fill="none" stroke="#8be8f4" stroke-opacity="0.4" stroke-width=".6"><path d="M6 74.0L94 62.0"/><path d="M8 77.2L92 66.8"/><path d="M10 80.4L90 71.60000000000001"/><path d="M12 83.6L88 76.39999999999999"/><path d="M14 86.8L86 81.2"/><path d="M16 90.0L84 86.0"/><path d="M18 93.2L82 90.80000000000001"/><path d="M14 94L26 66"/><path d="M30 94L42 66"/><path d="M46 94L58 66"/><path d="M62 94L74 66"/><path d="M78 94L90 66"/></g><defs>
+    <linearGradient id="wL" x1="30" y1="41" x2="52" y2="83" gradientUnits="userSpaceOnUse"><stop stop-color="#8be8f4"/><stop offset=".45" stop-color="#3a9be8"/><stop offset="1" stop-color="#0b6bdc"/></linearGradient>
+    <linearGradient id="wR" x1="52" y1="40" x2="76" y2="82" gradientUnits="userSpaceOnUse"><stop stop-color="#1c5fb8"/><stop offset="1" stop-color="#0a2a50"/></linearGradient>
+    <linearGradient id="wS" x1="10" y1="80" x2="92" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#0b6bdc"/><stop offset="1" stop-color="#27c6df"/></linearGradient>
+    <linearGradient id="wF" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#27c6df"/><stop offset="1" stop-color="#0b6bdc"/></linearGradient>
+  </defs>
+  <polygon points="17,56 30,59.5 30,77 17,73.5" fill="url(#wL)" opacity=".8"/>
+  <polygon points="17,56 30,59.5 33,58.6 20,55.2" fill="#cfeefb"/>
+  <g stroke="#071b38" stroke-opacity="0.4" stroke-width="1.3"><line x1="23.50" y1="57.75" x2="23.50" y2="75.25"/><line x1="17.00" y1="61.83" x2="30.00" y2="65.33"/><line x1="17.00" y1="67.67" x2="30.00" y2="71.17"/></g>
+  <polygon points="30,41 52,47 52,83 30,77" fill="url(#wL)"/>
+  <g stroke="#071b38" stroke-opacity="0.45" stroke-width="1.3"><line x1="37.33" y1="43.00" x2="37.33" y2="79.00"/><line x1="44.67" y1="45.00" x2="44.67" y2="81.00"/><line x1="30.00" y1="50.00" x2="52.00" y2="56.00"/><line x1="30.00" y1="59.00" x2="52.00" y2="65.00"/><line x1="30.00" y1="68.00" x2="52.00" y2="74.00"/></g>
+  <polygon points="52,47 76,39 76,75 52,83" fill="url(#wR)"/>
+  <g stroke="#27c6df" stroke-opacity="0.5" stroke-width="1.3"><line x1="60.00" y1="44.33" x2="60.00" y2="80.33"/><line x1="68.00" y1="41.67" x2="68.00" y2="77.67"/><line x1="52.00" y1="56.00" x2="76.00" y2="48.00"/><line x1="52.00" y1="65.00" x2="76.00" y2="57.00"/><line x1="52.00" y1="74.00" x2="76.00" y2="66.00"/></g>
+  <polygon points="30,41 52,47 76,39 54,33.5" fill="#eff8ff"/>
+  <path d="M52 47V83" stroke="#eff8ff" stroke-opacity=".7" stroke-width="1.2"/>
+  <path d="M10 71C28 95 72 94 93 53C77 84 34 89 10 71Z" fill="url(#wS)"/>
+  <g fill="none" stroke="url(#wF)" stroke-linecap="round" stroke-width="4.2">
+    <path d="M46.3 21.3A8 8 0 0 1 57.7 21.3"/>
+    <path d="M41.4 16.4A15 15 0 0 1 62.6 16.4"/>
+  </g>
+  <circle cx="52" cy="27" r="2.8" fill="#27c6df"/></g>
+  <text x="236" y="104" fill="#eff8ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="58" font-weight="800" letter-spacing="-2">InfraPlan<tspan dx="14" fill="#8be8f4" font-size="31" font-weight="600" letter-spacing="1">Studio</tspan></text>
+  <text x="239" y="142" fill="#9bb3c8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="600" letter-spacing="3">PLANIFICA · CONECTA · DOCUMENTA</text>
+</svg>
