@@ -45,6 +45,22 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .container { width: 100%; max-width: 1180px; margin: 0 auto; }
 
+/* ---------- Marcas de InfraPlan Studio (solo tipografía, fuentes OFL) ---------- */
+@font-face { font-family: "IPS Grotesk"; src: url(/assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "IPS Grotesk"; src: url(/assets/fonts/space-grotesk-latin-500-normal.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "IPS Petch"; src: url(/assets/fonts/chakra-petch-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "IPS Fraunces"; src: url(/assets/fonts/fraunces-latin-700-normal.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+.wm { display: inline-block; white-space: nowrap; line-height: 1; font-style: normal; }
+.wm b { font-weight: inherit; }
+.wm-infraplan { font-family: "IPS Grotesk", Inter, sans-serif; font-weight: 700; letter-spacing: -.03em; }
+.wm-infraplan b { margin-left: .22em; color: var(--cyan-soft); font-weight: 500; letter-spacing: -.01em; }
+.wm-plantek { font-family: "IPS Petch", Inter, sans-serif; font-weight: 700; letter-spacing: .01em; }
+.wm-plantek b { color: #4fa8ff; }
+.wm-memotek { font-family: "IPS Fraunces", Georgia, serif; font-weight: 700; letter-spacing: -.01em; }
+.wm-memotek b { color: #2fd3c0; }
+/* Plano azul dentro de las letras, como en la portada de la app */
+.ip-texture, .ip-texture .wm-infraplan, .ip-texture .wm-infraplan b { background: url(/assets/infraplan/letras.webp) 28% 30% / 150% auto; -webkit-background-clip: text; background-clip: text; color: transparent; }
+
 /* ---------- Sidebar ---------- */
 .sidebar { position: fixed; inset: 0 auto 0 0; z-index: 30; width: var(--sidebar); display: flex; flex-direction: column; padding: 30px 20px 24px; color: #dfeaf7; background: radial-gradient(120% 60% at 0% 0%, rgba(11,107,220,.28), transparent 60%), linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 60%, var(--navy-3) 100%); border-right: 1px solid rgba(255,255,255,.06); overflow-y: auto; }
 .identity { display: flex; align-items: center; gap: 12px; padding: 0 6px; margin-bottom: 38px; }
@@ -174,10 +190,8 @@ main { margin-left: var(--sidebar); min-width: 0; }
 .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); animation: pulse-cyan 2.2s infinite; }
 @keyframes pulse-cyan { 0%,100% { box-shadow: 0 0 0 0 rgba(39,198,223,.6); } 50% { box-shadow: 0 0 0 7px rgba(39,198,223,0); } }
 .ip-head { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
-.ip-logo { width: min(100%, 380px); margin: 4px 0 28px; border-radius: 16px; box-shadow: 0 0 0 1px rgba(139,232,244,.16), 0 20px 40px -20px rgba(0,0,0,.6); }
 .ip-intro h2 { color: #fff; font-size: clamp(1.9rem, 3.2vw, 2.8rem); }
 .ip-intro h2 em { font-style: normal; color: var(--cyan-soft); }
-.ip-intro > p:not(.kicker) { margin-top: 18px; color: var(--muted-light); font-size: 1.02rem; line-height: 1.75; }
 .ip-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 30px; }
 .ip-note { display: inline-flex; align-items: center; gap: 7px; color: var(--cyan-soft); font-size: .84rem; font-weight: 500; }
 .ip-shot { margin: 0; border: 1px solid rgba(139,232,244,.2); border-radius: 16px; overflow: hidden; background: #0b1424; box-shadow: 0 40px 80px -30px rgba(0,0,0,.7), 0 0 0 8px rgba(255,255,255,.02); transform: perspective(1600px) rotateY(-5deg) rotateX(2deg); transition: transform .6s cubic-bezier(.2,.7,.2,1); }
@@ -200,7 +214,7 @@ main { margin-left: var(--sidebar); min-width: 0; }
 .ip-product ul { display: grid; gap: 10px; }
 .ip-product li { display: flex; gap: 10px; color: var(--muted-light); font-size: .9rem; line-height: 1.6; }
 .ip-product li .i { margin-top: 4px; color: var(--cyan); }
-.ip-features { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 18px; border: 1px solid var(--line-dark); border-radius: var(--radius); background: var(--line-dark); overflow: hidden; }
+.ip-features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; margin-top: 18px; border: 1px solid var(--line-dark); border-radius: var(--radius); background: var(--line-dark); overflow: hidden; }
 .ip-features div { display: grid; gap: 4px; padding: 22px; background: rgba(4,17,38,.85); }
 .ip-features .i { margin-bottom: 8px; color: var(--cyan); font-size: 1.3rem; }
 .ip-features strong { color: #fff; font-size: .92rem; }
@@ -304,7 +318,7 @@ main { margin-left: var(--sidebar); min-width: 0; }
 /* ---------- Contact ---------- */
 .contact-section { padding: 0 var(--gutter) clamp(64px, 8vw, 100px); }
 .contact-card { position: relative; overflow: hidden; padding: clamp(36px, 6vw, 72px); border-radius: 28px; color: #dfeaf7; background: radial-gradient(60% 80% at 100% 0%, rgba(39,198,223,.28), transparent 60%), linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); box-shadow: var(--shadow-lg); }
-.contact-card::after { content: ""; position: absolute; right: -60px; bottom: -60px; width: 260px; height: 260px; background: url("/assets/infraplan/infraplan-mark.svg") center / contain no-repeat; opacity: .07; transform: rotate(-12deg); }
+.contact-card::after { content: "InfraPlan"; position: absolute; right: -20px; bottom: -34px; font-family: "IPS Grotesk", var(--display); font-weight: 700; font-size: clamp(90px, 14vw, 190px); letter-spacing: -.04em; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(139,232,244,.12); pointer-events: none; }
 .contact-card h2 { max-width: 760px; color: #fff; font-size: clamp(2rem, 4vw, 3.3rem); }
 .contact-intro { max-width: 640px; margin-top: 18px; color: var(--muted-light); font-size: 1.04rem; line-height: 1.75; }
 .contact-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 32px; }
@@ -319,6 +333,7 @@ main { margin-left: var(--sidebar); min-width: 0; }
   .value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .credential-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ip-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ip-brand .ip-word { font-size: clamp(56px, 9vw, 104px); }
   .hero-card { left: -12px; }
 }
 
@@ -374,4 +389,53 @@ main { margin-left: var(--sidebar); min-width: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- Marcas aplicadas ---------- */
+.side-venture > span { min-width: 0; }
+.side-venture .wm-infraplan { display: block; margin-top: 4px; color: #fff; font-size: 1.12rem; }
+.role-chip { padding: 8px 16px 8px 8px; gap: 10px; }
+.role-chip-label { padding: 4px 9px; border-radius: 999px; background: rgba(139,232,244,.14); color: var(--cyan-soft); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.role-chip .wm-infraplan { font-size: 1.05rem; }
+.hero-card { display: grid; gap: 6px; padding: 16px 20px; }
+.hero-card .ip-texture { font-size: 1.6rem; }
+.hero-card .wm-infraplan b { margin-left: .18em; }
+.experience-title .brand-ip { width: 64px; min-width: 64px; height: 44px; border-radius: 10px; background: var(--navy-3); box-shadow: inset 0 0 0 1px rgba(139,232,244,.3); }
+.experience-title .brand-ip .wm { color: #fff; font-size: 1.15rem; }
+.experience-title .brand-ip .wm b { margin-left: .04em; }
+
+.ip-brand { display: inline-grid; justify-items: center; margin: 6px 0 0; font-family: "IPS Grotesk", var(--display); font-weight: 700; line-height: 1; }
+.ip-word { font-size: clamp(64px, 7.4vw, 112px); line-height: .88; letter-spacing: -.035em; }
+.ip-studio { margin-top: 6px; margin-right: -.32em; font-size: clamp(22px, 2.45vw, 37px); letter-spacing: .32em; text-transform: uppercase; }
+.ip-tagline { margin: 16px 0 30px; color: var(--muted-light); font-size: .74rem; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; }
+.ip-intro h2 { font-size: clamp(1.6rem, 2.6vw, 2.3rem); }
+.ip-copy { margin-top: 18px; color: var(--muted-light); font-size: 1.02rem; line-height: 1.75; }
+
+.ip-gallery { min-width: 0; }
+.ip-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.ip-tabs button { display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border: 1px solid var(--line-dark); border-radius: 999px; background: rgba(255,255,255,.03); color: var(--muted-light); font: 600 .82rem var(--font); cursor: pointer; transition: .2s; }
+.ip-tabs button .wm { color: #fff; font-size: .98rem; }
+.ip-tabs button:hover { border-color: rgba(139,232,244,.4); color: #fff; }
+.ip-tabs button[aria-selected="true"] { border-color: var(--cyan); background: rgba(39,198,223,.12); color: #fff; }
+.ip-frames { display: grid; }
+.ip-frames img { grid-area: 1 / 1; width: 100%; height: 100%; object-fit: cover; object-position: top left; aspect-ratio: 16 / 10; opacity: 0; transition: opacity .45s ease; }
+.ip-frames img.on { opacity: 1; }
+.ip-caption { margin-top: 12px; color: #6f88a6; font-size: .76rem; }
+
+.ip-product header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.ip-product h3.wm { color: #fff; font-size: 2rem; letter-spacing: 0; }
+.ip-product.plantek h3.wm { font-family: "IPS Petch", Inter, sans-serif; }
+.ip-product.memotek h3.wm { font-family: "IPS Fraunces", Georgia, serif; }
+.ip-product.plantek { box-shadow: inset 0 3px 0 #4fa8ff; }
+.ip-product.memotek { box-shadow: inset 0 3px 0 #2fd3c0; }
+.ip-product.memotek li .i { color: #2fd3c0; }
+.ip-product.plantek li .i { color: #4fa8ff; }
+
+@media (max-width: 760px) {
+  .ip-word { font-size: 18.5vw; }
+  .ip-studio { font-size: 6.4vw; }
+  .ip-brand { display: grid; }
+  .hero-card .ip-texture { font-size: 1.35rem; }
+  .role-chip { flex-wrap: wrap; }
+  .ip-product header { flex-direction: column; align-items: flex-start; gap: 8px; }
 }

@@ -1,0 +1,9 @@
+Tipografías de las marcas de InfraPlan Studio (logotipos de texto)
+
+- Space Grotesk (InfraPlan Studio) · Florian Karsten
+- Chakra Petch (PlanTEK) · Cadson Demak
+- Fraunces (MemoTEK) · Undercase Type
+
+Las tres se distribuyen con la SIL Open Font License 1.1 (https://openfontlicense.org),
+que permite usarlas, incrustarlas y redistribuirlas con el software. Archivos obtenidos de
+los paquetes @fontsource (subconjunto latino, formato WOFF2).
